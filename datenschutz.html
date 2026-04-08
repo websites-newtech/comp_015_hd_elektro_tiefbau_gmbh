@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Datenschutzerklärung der HD Elektro & Tiefbau GmbH.">
+  <title>Datenschutz | HD Elektro & Tiefbau GmbH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <nav class="navbar" x-data="{ scrolled: false }" :class="{ 'navbar--scrolled': scrolled }" @scroll.window="scrolled = window.scrollY > 40">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="HD Elektro & Tiefbau GmbH – Startseite">
+        <span class="logo-hd">HD</span>
+        <span class="logo-text">
+          <span class="logo-line1">ELEKTRO &amp;</span>
+          <span class="logo-line2">TIEFBAU GMBH</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Startseite</a></li>
+        <li><a href="leistungen.html" class="nav-link">Leistungen</a></li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="btn btn--accent nav-cta">Anfrage stellen</a>
+      <button class="hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-label="Menü öffnen">
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }">
+      <ul role="list">
+        <li><a href="index.html" @click="mobileOpen = false" class="mobile-link">Startseite</a></li>
+        <li><a href="kontakt.html" @click="mobileOpen = false" class="mobile-link">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero page-hero--sm">
+      <div class="container">
+        <h1 class="page-hero__title" data-animate-hero>Datenschutz&shy;erklärung</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container legal-content">
+        <div data-animate>
+          <h2>1. Verantwortlicher</h2>
+          <p>
+            HD Elektro &amp; Tiefbau GmbH<br>
+            Iggelhorst 5, 44149 Dortmund<br>
+            E-Mail: <a href="mailto:info@hd-ets.de">info@hd-ets.de</a><br>
+            Telefon: <a href="tel:+4923162835970">+49 231 6283597</a>
+          </p>
+
+          <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+          <p>Beim Besuchen unserer Website werden durch den Browser auf Ihrem Endgerät automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden temporär in einem sogenannten Logfile gespeichert. Folgende Informationen werden dabei ohne Ihr Zutun erfasst und bis zur automatisierten Löschung gespeichert:</p>
+          <ul>
+            <li>IP-Adresse des anfragenden Rechners</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Name und URL der abgerufenen Datei</li>
+            <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+            <li>Verwendeter Browser und ggf. das Betriebssystem Ihres Rechners</li>
+          </ul>
+
+          <h2>3. Kontaktformular</h2>
+          <p>Bei der Nutzung des Kontaktformulars werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung Ihrer Anfrage bei uns gespeichert. Die Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben.</p>
+
+          <h2>4. Ihre Rechte</h2>
+          <p>Sie haben das Recht auf:</p>
+          <ul>
+            <li>Auskunft über Ihre gespeicherten personenbezogenen Daten</li>
+            <li>Berichtigung unrichtiger personenbezogener Daten</li>
+            <li>Löschung Ihrer bei uns gespeicherten Daten</li>
+            <li>Einschränkung der Datenverarbeitung</li>
+            <li>Datenübertragbarkeit</li>
+            <li>Widerspruch gegen die Verarbeitung Ihrer Daten</li>
+          </ul>
+          <p>Wenn Sie eines dieser Rechte ausüben möchten, wenden Sie sich bitte an: <a href="mailto:info@hd-ets.de">info@hd-ets.de</a></p>
+
+          <h2>5. Cookies</h2>
+          <p>Diese Website verwendet Cookies, um Ihre Online-Erfahrung zu personalisieren. Durch den Zugriff auf unsere Website stimmen Sie der Verwendung der erforderlichen Cookies zu. Sie haben die Möglichkeit, optionale Cookies in Ihren Browsereinstellungen abzulehnen.</p>
+
+          <h2>6. Externe Links</h2>
+          <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+
+          <h2>7. Aktualität dieser Datenschutzerklärung</h2>
+          <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Januar 2025.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 HD Elektro &amp; Tiefbau GmbH</p>
+        <div class="footer-legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
