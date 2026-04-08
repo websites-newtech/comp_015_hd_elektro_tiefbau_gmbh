@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Allgemeine Geschäftsbedingungen der HD Elektro & Tiefbau GmbH.">
+  <title>AGB | HD Elektro & Tiefbau GmbH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <nav class="navbar" x-data="{ scrolled: false }" :class="{ 'navbar--scrolled': scrolled }" @scroll.window="scrolled = window.scrollY > 40">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="HD Elektro & Tiefbau GmbH – Startseite">
+        <span class="logo-hd">HD</span>
+        <span class="logo-text">
+          <span class="logo-line1">ELEKTRO &amp;</span>
+          <span class="logo-line2">TIEFBAU GMBH</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Startseite</a></li>
+        <li><a href="leistungen.html" class="nav-link">Leistungen</a></li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="btn btn--accent nav-cta">Anfrage stellen</a>
+      <button class="hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-label="Menü öffnen">
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }">
+      <ul role="list">
+        <li><a href="index.html" @click="mobileOpen = false" class="mobile-link">Startseite</a></li>
+        <li><a href="kontakt.html" @click="mobileOpen = false" class="mobile-link">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-hero page-hero--sm">
+      <div class="container">
+        <h1 class="page-hero__title" data-animate-hero>Allgemeine Geschäfts&shy;bedingungen</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container legal-content">
+        <div data-animate>
+          <p>Willkommen bei HD Elektro- und Tiefbauservice GmbH!</p>
+          <p>Diese Allgemeinen Geschäftsbedingungen legen die Regeln und Vorschriften für die Nutzung der Website der HD Elektro- und Tiefbauservice GmbH fest, die unter <a href="https://hd-ets.de" target="_blank" rel="noopener">https://hd-ets.de</a> erreichbar ist.</p>
+          <p>Durch den Zugriff auf diese Website gehen wir davon aus, dass Sie diese Allgemeinen Geschäftsbedingungen akzeptieren. Nutzen Sie die Website nicht weiter, wenn Sie nicht allen aufgeführten Bedingungen zustimmen.</p>
+
+          <h2>Cookies</h2>
+          <p>Die Website verwendet Cookies, um Ihre Online-Erfahrung zu personalisieren. Durch den Zugriff auf unsere Website stimmen Sie der Verwendung der erforderlichen Cookies zu. Ein Cookie ist eine Textdatei, die von einem Webserver auf Ihrer Festplatte abgelegt wird. Cookies können nicht verwendet werden, um Programme auszuführen oder Viren auf Ihren Computer zu übertragen.</p>
+          <p>Wir können Cookies verwenden, um Informationen für statistische oder Marketingzwecke zu sammeln. Sie haben die Möglichkeit, optionale Cookies abzulehnen.</p>
+
+          <h2>Lizenz</h2>
+          <p>Sofern nicht anders angegeben, gehören die geistigen Eigentumsrechte für alle Materialien auf unserer Website der HD Elektro &amp; Tiefbau GmbH. Alle Rechte vorbehalten. Sie dürfen von unserer Website für Ihren persönlichen und nicht-kommerziellen Gebrauch auf Seiten Ihrer Website zugreifen. Folgendes ist nicht gestattet:</p>
+          <ul>
+            <li>Materialien von unserer Website neu veröffentlichen</li>
+            <li>Materialien von unserer Website verkaufen, vermieten oder unterlizenzieren</li>
+            <li>Materialien von unserer Website reproduzieren, duplizieren oder kopieren</li>
+            <li>Inhalte von unserer Website weiterverbreiten</li>
+          </ul>
+
+          <h2>Garantien und Versicherungen des Nutzers</h2>
+          <p>Sie garantieren und versichern, dass:</p>
+          <ul>
+            <li>Sie berechtigt sind, Kommentare auf unserer Website zu veröffentlichen und alle notwendigen Lizenzen und Zustimmungen dazu haben</li>
+            <li>Kommentare keine Urheberrechte, Patente, Marken, Geschäftsgeheimnisse oder andere Eigentumsrechte verletzen</li>
+            <li>Kommentare keine diffamierenden, verleumderischen, beleidigenden, unanständigen oder anderweitig rechtswidrigen Inhalte enthalten</li>
+            <li>Kommentare nicht zur Werbung oder Förderung von Geschäften oder gewerblichen Aktivitäten genutzt werden</li>
+          </ul>
+
+          <h2>Verlinkung zu unseren Inhalten</h2>
+          <p>Folgende Organisationen dürfen ohne vorherige schriftliche Genehmigung auf unsere Website verlinken: Behörden, Suchmaschinen, Nachrichtenorganisationen. Für weitere Anfragen zur Verlinkung kontaktieren Sie uns bitte unter <a href="mailto:info@hd-ets.de">info@hd-ets.de</a>.</p>
+
+          <h2>Haftungsausschluss</h2>
+          <p>Soweit gesetzlich zulässig, schließen wir alle Zusicherungen, Gewährleistungen und Bedingungen im Zusammenhang mit unserer Website und der Nutzung dieser Website aus.</p>
+
+          <p><em>Stand: Januar 2025</em></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 HD Elektro &amp; Tiefbau GmbH</p>
+        <div class="footer-legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

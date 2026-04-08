@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projekte von HD Elektro & Tiefbau GmbH – Referenzen aus Tiefbau, Kabelverlegung, Glasfaser und Ladesäulen-Infrastruktur.">
+  <title>Projekte | HD Elektro & Tiefbau GmbH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileOpen: false, filter: 'all' }">
+
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <nav class="navbar" x-data="{ scrolled: false }" :class="{ 'navbar--scrolled': scrolled }" @scroll.window="scrolled = window.scrollY > 40">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="HD Elektro & Tiefbau GmbH – Startseite">
+        <span class="logo-hd">HD</span>
+        <span class="logo-text">
+          <span class="logo-line1">ELEKTRO &amp;</span>
+          <span class="logo-line2">TIEFBAU GMBH</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Startseite</a></li>
+        <li><a href="leistungen.html" class="nav-link">Leistungen</a></li>
+        <li><a href="projekte.html" class="nav-link" aria-current="page">Projekte</a></li>
+        <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="btn btn--accent nav-cta">Anfrage stellen</a>
+      <button class="hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-label="Menü öffnen">
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }">
+      <ul role="list">
+        <li><a href="index.html" @click="mobileOpen = false" class="mobile-link">Startseite</a></li>
+        <li><a href="leistungen.html" @click="mobileOpen = false" class="mobile-link">Leistungen</a></li>
+        <li><a href="projekte.html" @click="mobileOpen = false" class="mobile-link" aria-current="page">Projekte</a></li>
+        <li><a href="ueber-uns.html" @click="mobileOpen = false" class="mobile-link">Über uns</a></li>
+        <li><a href="kontakt.html" @click="mobileOpen = false" class="mobile-link">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__eyebrow" data-animate-hero>Referenzen &amp; Abgeschlossene Projekte</p>
+        <h1 class="page-hero__title" data-animate-hero>Unsere Projekte</h1>
+        <p class="page-hero__subtitle" data-animate-hero>Einblicke in unsere Arbeit – von Tiefbau über Glasfaser bis hin zur Ladesäulen-Infrastruktur.</p>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="section" style="padding-top:0;padding-bottom:32px;">
+      <div class="container">
+        <div class="filter-bar" role="group" aria-label="Projekte filtern">
+          <button class="filter-btn" :class="{ 'filter-btn--active': filter === 'all' }" @click="filter = 'all'">Alle</button>
+          <button class="filter-btn" :class="{ 'filter-btn--active': filter === 'tiefbau' }" @click="filter = 'tiefbau'">Tiefbau</button>
+          <button class="filter-btn" :class="{ 'filter-btn--active': filter === 'glasfaser' }" @click="filter = 'glasfaser'">Glasfaser</button>
+          <button class="filter-btn" :class="{ 'filter-btn--active': filter === 'ladesaeulen' }" @click="filter = 'ladesaeulen'">Ladesäulen</button>
+          <button class="filter-btn" :class="{ 'filter-btn--active': filter === 'pflaster' }" @click="filter = 'pflaster'">Pflaster &amp; Zaun</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="projects-filter-grid">
+          <div class="project-card" x-show="filter === 'all' || filter === 'tiefbau'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/hero_002.jpg" alt="Tiefbauarbeiten mit Bagger – Kabelverlegung" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Tiefbau</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Tiefbau &amp; Kabelverlegung</h3>
+              <p>Erdarbeiten und Kabelverlegung für ein Erschließungsprojekt in Dortmund. Termingerechte Ausführung mit modernster Ausrüstung.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'glasfaser'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/image_002.jpg" alt="Glasfaser Tiefbau – Verlegung im Stadtgebiet" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Glasfaser</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Glasfaser Netzausbau</h3>
+              <p>Komplette Glasfaser-Infrastruktur inkl. Trassenplanung und Inbetriebnahme für schnelles Hochgeschwindigkeitsinternet.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'ladesaeulen'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/image_003.jpg" alt="Ladesäulen-Infrastruktur bei Einzelhändler" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Ladesäulen</span>
+            </div>
+            <div class="project-card__body">
+              <h3>E-Ladesäulen bei Aldi &amp; Lidl</h3>
+              <p>Schlüsselfertige Ladeinfrastruktur für mehrere Einzelhandelsstandorte – von der Planung bis zur Inbetriebnahme.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'pflaster'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/image_004.jpg" alt="Pflasterarbeiten – Einfahrt und Außenbereich" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Pflaster</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Pflasterarbeiten Außenbereich</h3>
+              <p>Hochwertige Pflasterstein-Verlegung für Einfahrten, Terrassen und Wege mit langlebigen Materialien.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'ladesaeulen'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/hero_003.jpg" alt="Ladesäulen-Installation Krankenhaus" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Ladesäulen</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Krankenhaus Ladeinfrastruktur</h3>
+              <p>Robuste und zuverlässige Ladeinfrastruktur für ein Krankenhaus – zukunftssichere Energieversorgung.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'tiefbau'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/hero_001.jpg" alt="Tiefbauarbeiten – Fundamentarbeiten" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Tiefbau</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Fundamentarbeiten &amp; Erschließung</h3>
+              <p>Professionelle Fundamentarbeiten und Grundstückserschließung für Wohn- und Gewerbebau in der Region Dortmund.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'pflaster'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/image_005.jpg" alt="Zaunbau und Außenanlagen" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Zaun</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Zaunbau &amp; Außenanlagen</h3>
+              <p>Robuste Einfriedungen und Außenanlagen für private und gewerbliche Kunden – ästhetisch und langlebig.</p>
+            </div>
+          </div>
+
+          <div class="project-card" x-show="filter === 'all' || filter === 'glasfaser'" x-transition data-animate>
+            <div class="project-card__img-wrap">
+              <img src="assets/images/hero_002.jpg" alt="Glasfaser Tiefbau Trasse" width="600" height="400" loading="lazy">
+              <span class="project-card__tag">Glasfaser</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Glasfaser Trassenbau</h3>
+              <p>Effizienter Trassenbau für großflächige Glasfasernetze – minimale Beeinträchtigung, maximale Geschwindigkeit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-block" data-animate>
+          <p class="section-eyebrow">Ihr Projekt</p>
+          <h2 class="cta-title">Wir realisieren auch Ihr Projekt.</h2>
+          <p class="cta-body">Erzählen Sie uns von Ihrem Vorhaben – wir erstellen Ihnen schnell und unverbindlich ein Angebot.</p>
+          <div class="cta-actions">
+            <a href="kontakt.html" class="btn btn--accent btn--lg">Projekt anfragen</a>
+            <a href="tel:+4923162835970" class="btn btn--ghost btn--lg">+49 231 6283597</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="HD Elektro & Tiefbau GmbH">
+          <span class="logo-hd">HD</span>
+          <span class="logo-text">
+            <span class="logo-line1">ELEKTRO &amp;</span>
+            <span class="logo-line2">TIEFBAU GMBH</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Ihr zuverlässiger Partner für Elektro- und Tiefbauarbeiten in Dortmund seit 2017.</p>
+      </div>
+      <div class="footer-links-col">
+        <h3 class="footer-heading">Leistungen</h3>
+        <ul role="list">
+          <li><a href="leistungen.html#tiefbau">Tiefbauarbeiten</a></li>
+          <li><a href="leistungen.html#kabel">Kabelverlegung</a></li>
+          <li><a href="leistungen.html#glasfaser">Glasfaser Tiefbau</a></li>
+          <li><a href="leistungen.html#pflaster">Pflaster &amp; Asphalt</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h3 class="footer-heading">Unternehmen</h3>
+        <ul role="list">
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h3 class="footer-heading">Kontakt</h3>
+        <ul role="list" class="footer-contact-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+4923162835970">+49 231 6283597</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@hd-ets.de">info@hd-ets.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 HD Elektro &amp; Tiefbau GmbH · HRB 37343 – Amtsgericht Dortmund</p>
+        <div class="footer-legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

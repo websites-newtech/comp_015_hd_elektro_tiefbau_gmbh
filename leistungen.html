@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leistungen von HD Elektro & Tiefbau GmbH: Tiefbau, Kabelverlegung, Glasfaser, Pflaster, Ladesäulen und Zaunbau in Dortmund.">
+  <title>Leistungen | HD Elektro & Tiefbau GmbH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileOpen: false }">
+
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <nav class="navbar" x-data="{ scrolled: false }" :class="{ 'navbar--scrolled': scrolled }" @scroll.window="scrolled = window.scrollY > 40">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="HD Elektro & Tiefbau GmbH – Startseite">
+        <span class="logo-hd">HD</span>
+        <span class="logo-text">
+          <span class="logo-line1">ELEKTRO &amp;</span>
+          <span class="logo-line2">TIEFBAU GMBH</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Startseite</a></li>
+        <li><a href="leistungen.html" class="nav-link" aria-current="page">Leistungen</a></li>
+        <li><a href="projekte.html" class="nav-link">Projekte</a></li>
+        <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="btn btn--accent nav-cta">Anfrage stellen</a>
+      <button class="hamburger" @click="mobileOpen = !mobileOpen" :aria-expanded="mobileOpen.toString()" aria-label="Menü öffnen">
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+        <span class="hamburger-line" :class="{ 'active': mobileOpen }"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" :class="{ 'mobile-menu--open': mobileOpen }">
+      <ul role="list">
+        <li><a href="index.html" @click="mobileOpen = false" class="mobile-link">Startseite</a></li>
+        <li><a href="leistungen.html" @click="mobileOpen = false" class="mobile-link" aria-current="page">Leistungen</a></li>
+        <li><a href="projekte.html" @click="mobileOpen = false" class="mobile-link">Projekte</a></li>
+        <li><a href="ueber-uns.html" @click="mobileOpen = false" class="mobile-link">Über uns</a></li>
+        <li><a href="kontakt.html" @click="mobileOpen = false" class="mobile-link">Kontakt</a></li>
+        <li><a href="kontakt.html" @click="mobileOpen = false" class="btn btn--accent" style="display:inline-block;margin-top:8px;">Anfrage stellen</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__eyebrow" data-animate-hero>Was wir leisten</p>
+        <h1 class="page-hero__title" data-animate-hero>Unsere Leistungen</h1>
+        <p class="page-hero__subtitle" data-animate-hero>Umfassende Dienstleistungen in Elektroinstallationen und Tiefbau für höchste Qualitätsstandards.</p>
+      </div>
+    </section>
+
+    <!-- Tiefbau -->
+    <section class="section service-detail-section" id="tiefbau">
+      <div class="container service-detail-grid">
+        <div class="service-detail-content">
+          <p class="section-eyebrow" data-animate>Leistung 01</p>
+          <h2 class="section-title" data-animate>Tiefbauarbeiten</h2>
+          <p data-animate>Wir sind Ihr erfahrener Partner für alle Arten von Tiefbauarbeiten. Unser Leistungsspektrum umfasst Erdarbeiten, Kanalbau, Leitungsverlegung und Fundamentarbeiten für diverse Projekte.</p>
+          <p data-animate>Ob für den Straßenbau, die Erschließung von Grundstücken oder die Vorbereitung von Bauvorhaben – wir führen alle Arbeiten präzise, effizient und termingerecht aus. Mit modernster Ausrüstung und qualifiziertem Personal gewährleisten wir höchste Qualität und Sicherheit bei jedem Tiefbauprojekt.</p>
+          <ul class="service-features" data-animate>
+            <li>Erdarbeiten &amp; Aushub</li>
+            <li>Kanalbau &amp; Entwässerung</li>
+            <li>Leitungsverlegung</li>
+            <li>Fundamentarbeiten</li>
+            <li>Straßenbau &amp; Erschließung</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--accent" data-animate>Tiefbau anfragen</a>
+        </div>
+        <div class="service-detail-image" data-animate>
+          <img src="assets/images/hero_003.jpg" alt="Tiefbauarbeiten mit Bagger auf einer Baustelle" width="600" height="500" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Kabelverlegung -->
+    <section class="section service-detail-section service-detail-section--alt" id="kabel">
+      <div class="container service-detail-grid service-detail-grid--reverse">
+        <div class="service-detail-content">
+          <p class="section-eyebrow" data-animate>Leistung 02</p>
+          <h2 class="section-title" data-animate>Kabelverlegung im Hoch- &amp; Tiefbau</h2>
+          <p data-animate>Professionelle Kabelverlegung im Hoch- und Tiefbau ist unsere Kernkompetenz. Wir installieren Energiekabel, Datenleitungen und Steuerkabel zuverlässig und normgerecht.</p>
+          <p data-animate>Von der Planung über die Installation bis zur Inbetriebnahme begleiten wir Ihr Projekt kompetent und sorgen für eine dauerhafte und sichere Stromversorgung.</p>
+          <ul class="service-features" data-animate>
+            <li>Energiekabel-Verlegung</li>
+            <li>Datenleitungen &amp; Kommunikation</li>
+            <li>Steuerkabel-Installation</li>
+            <li>Normgerechte Ausführung</li>
+            <li>Wohn- &amp; Gewerbeobjekte</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--accent" data-animate>Kabelverlegung anfragen</a>
+        </div>
+        <div class="service-detail-image" data-animate>
+          <img src="assets/images/image_001.jpg" alt="Kabelverlegungsarbeiten im Tiefbau" width="600" height="500" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Glasfaser -->
+    <section class="section service-detail-section" id="glasfaser">
+      <div class="container service-detail-grid">
+        <div class="service-detail-content">
+          <p class="section-eyebrow" data-animate>Leistung 03</p>
+          <h2 class="section-title" data-animate>Glasfaser Tiefbau &amp; Technik</h2>
+          <p data-animate>Wir sind Ihr Spezialist für Glasfaser-Tiefbau und -Technik. Unser Service umfasst die komplette Planung und Realisierung moderner Glasfasernetze.</p>
+          <p data-animate>Wir übernehmen den gesamten Tiefbau für die Verlegung der Kabel und die Installation der notwendigen technischen Komponenten. Von der Trassenplanung bis zur Inbetriebnahme sorgen wir für eine schnelle und zuverlässige Anbindung an das Hochgeschwindigkeitsinternet. Vertrauen Sie auf unsere Expertise für zukunftssichere Kommunikationsinfrastrukturen.</p>
+          <ul class="service-features" data-animate>
+            <li>Trassenplanung &amp; -bau</li>
+            <li>Glasfaserkabel-Verlegung</li>
+            <li>Technische Komponenten-Installation</li>
+            <li>Inbetriebnahme &amp; Test</li>
+            <li>Zukunftssichere Netzinfrastruktur</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--accent" data-animate>Glasfaser anfragen</a>
+        </div>
+        <div class="service-detail-image" data-animate>
+          <img src="assets/images/image_002.jpg" alt="Glasfaser Tiefbau – Verlegung von Glasfaserkabeln" width="600" height="500" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Pflaster & Asphalt -->
+    <section class="section service-detail-section service-detail-section--alt" id="pflaster">
+      <div class="container service-detail-grid service-detail-grid--reverse">
+        <div class="service-detail-content">
+          <p class="section-eyebrow" data-animate>Leistung 04</p>
+          <h2 class="section-title" data-animate>Pflaster- &amp; Asphaltarbeiten</h2>
+          <p data-animate>Wir sind Ihr Fachbetrieb für die Gestaltung und Realisierung von Außenbereichen durch Pflaster- und Asphaltarbeiten. Unser Team verlegt hochwertige Pflastersteine für Wege, Terrassen und Einfahrten.</p>
+          <p data-animate>Wir legen Wert auf präzise Handwerkskunst und langlebige Materialien, um Ihre Außenanlagen optimal zu verschönern und zu schützen – sowohl funktional als auch optisch ansprechend.</p>
+          <ul class="service-features" data-animate>
+            <li>Pflasterstein-Verlegung</li>
+            <li>Asphalttierung</li>
+            <li>Wege &amp; Terrassen</li>
+            <li>Einfahrten &amp; Parkplätze</li>
+            <li>Öffentliche Verkehrsflächen</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--accent" data-animate>Pflasterarbeiten anfragen</a>
+        </div>
+        <div class="service-detail-image" data-animate>
+          <img src="assets/images/image_003.jpg" alt="Pflasterarbeiten – Verlegung von Pflastersteinen" width="600" height="500" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Ladesäulen -->
+    <section class="section service-detail-section" id="ladesaeulen">
+      <div class="container service-detail-grid">
+        <div class="service-detail-content">
+          <p class="section-eyebrow" data-animate>Leistung 05</p>
+          <h2 class="section-title" data-animate>Ladesäulen-Infrastruktur</h2>
+          <p data-animate>Wir sind Ihr umfassender Partner für Tiefbau und Ladeinfrastruktur, von A bis Z. Spezialisiert auf die Installation von Ladesäulen, bieten wir maßgeschneiderte Lösungen für große Einzelhändler wie Aldi und Lidl sowie für Krankenhäuser.</p>
+          <p data-animate>Unser Service umfasst die gesamte Planung, den Tiefbau und die schlüsselfertige Errichtung robuster und effizienter Ladeinfrastrukturen. Wir gewährleisten eine zuverlässige und zukunftssichere Energieversorgung für Ihre Standorte.</p>
+          <ul class="service-features" data-animate>
+            <li>Planung &amp; Konzeption</li>
+            <li>Tiefbau für Ladesäulen</li>
+            <li>Schlüsselfertige Errichtung</li>
+            <li>Einzelhandel (Aldi, Lidl)</li>
+            <li>Krankenhäuser &amp; öffentliche Einrichtungen</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--accent" data-animate>Ladesäulen anfragen</a>
+        </div>
+        <div class="service-detail-image" data-animate>
+          <img src="assets/images/image_004.jpg" alt="Ladesäulen-Infrastruktur Installation" width="600" height="500" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Zaun -->
+    <section class="section service-detail-section service-detail-section--alt" id="zaun">
+      <div class="container service-detail-grid service-detail-grid--reverse">
+        <div class="service-detail-content">
+          <p class="section-eyebrow" data-animate>Leistung 06</p>
+          <h2 class="section-title" data-animate>Zaun &amp; Außenanlagen</h2>
+          <p data-animate>Wir errichten robuste und ästhetische Zäune, die Privatsphäre, Sicherheit und Abgrenzung bieten. Parallel dazu gestalten wir Außenanlagen professionell und nachhaltig.</p>
+          <p data-animate>Wir legen Wert auf präzise Handwerkskunst und langlebige Materialien, um Ihre Außenanlagen optimal zu verschönern und zu schützen.</p>
+          <ul class="service-features" data-animate>
+            <li>Zaunbau aller Art</li>
+            <li>Sichtschutzzäune</li>
+            <li>Industrielle Einfriedungen</li>
+            <li>Außenbereich-Gestaltung</li>
+            <li>Langlebige Materialien</li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--accent" data-animate>Zaunbau anfragen</a>
+        </div>
+        <div class="service-detail-image" data-animate>
+          <img src="assets/images/hero_001.jpg" alt="Zaunbau und Außenanlagengestaltung" width="600" height="500" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-block" data-animate>
+          <p class="section-eyebrow">Loslegen</p>
+          <h2 class="cta-title">Interesse an unseren Leistungen?</h2>
+          <p class="cta-body">Kontaktieren Sie uns jetzt für eine unverbindliche Anfrage. Wir melden uns schnell und unkompliziert – auch über WhatsApp.</p>
+          <div class="cta-actions">
+            <a href="kontakt.html" class="btn btn--accent btn--lg">Jetzt Anfrage stellen</a>
+            <a href="tel:+4923162835970" class="btn btn--ghost btn--lg">+49 231 6283597</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="HD Elektro & Tiefbau GmbH">
+          <span class="logo-hd">HD</span>
+          <span class="logo-text">
+            <span class="logo-line1">ELEKTRO &amp;</span>
+            <span class="logo-line2">TIEFBAU GMBH</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Ihr zuverlässiger Partner für Elektro- und Tiefbauarbeiten in Dortmund seit 2017.</p>
+        <address style="font-style:normal;" class="footer-address">
+          Iggelhorst 5, 44149 Dortmund
+        </address>
+      </div>
+      <div class="footer-links-col">
+        <h3 class="footer-heading">Leistungen</h3>
+        <ul role="list">
+          <li><a href="leistungen.html#tiefbau">Tiefbauarbeiten</a></li>
+          <li><a href="leistungen.html#kabel">Kabelverlegung</a></li>
+          <li><a href="leistungen.html#glasfaser">Glasfaser Tiefbau</a></li>
+          <li><a href="leistungen.html#pflaster">Pflaster &amp; Asphalt</a></li>
+          <li><a href="leistungen.html#ladesaeulen">Ladesäulen</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h3 class="footer-heading">Unternehmen</h3>
+        <ul role="list">
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h3 class="footer-heading">Kontakt</h3>
+        <ul role="list" class="footer-contact-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+4923162835970">+49 231 6283597</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@hd-ets.de">info@hd-ets.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 HD Elektro &amp; Tiefbau GmbH · HRB 37343 – Amtsgericht Dortmund</p>
+        <div class="footer-legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
